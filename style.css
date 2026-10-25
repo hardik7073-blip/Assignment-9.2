@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #1e293b;
+    background-color: #f8fafc;
+}
+
+.header {
+    background-color: #172554;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.header h1 {
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.25rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: #93c5fd;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    line-height: 1.25;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    margin-bottom: 1rem;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+}
+
+/* Hero section: mobile first */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.hero-text {
+    min-width: 0;
+}
+
+.hero img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 0.4rem;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+}
+
+.about {
+    padding: 2rem 0;
+    max-width: 70ch;
+}
+
+.projects {
+    padding: 1.5rem 0;
+}
+
+.project-card {
+    background-color: white;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    margin: 1.5rem 0;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+.project-content {
+    padding: 1rem;
+    min-width: 0;
+}
+
+.project-content p,
+.about p,
+.hero-text p {
+    overflow-wrap: break-word;
+}
+
+footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 1.25rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1.25rem 2rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .hero {
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+        padding: 2.5rem 0;
+    }
+
+    .hero-text,
+    .hero img {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .project-card {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .project-card img {
+        width: 45%;
+        aspect-ratio: auto;
+        min-width: 0;
+    }
+
+    .project-content {
+        flex: 1;
+        padding: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .hero {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .hero img {
+        max-height: 400px;
+    }
+
+    .about {
+        padding: 3rem 0;
+    }
+
+    .project-card img {
+        width: 40%;
+    }
+}
